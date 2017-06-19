@@ -1,6 +1,6 @@
 /*
 *
-*     Tori - The Tesla Model ≡
+*     Tori - The Tesla Model 3, one badass
 *     @author: Vikat0n
 *
 */
@@ -23,10 +23,9 @@ function authenticate() {
     }
     request.post(options).then((resp) => {
       AUTH_TOKEN = JSON.parse(resp)["access_token"]
-      resolve()
+      resolve("Tori has authenticated with Tesla API...")
     }).catch((err) => {
-      console.log(err)
-      reject()
+      reject(err)
     })
   })
 }
@@ -45,6 +44,9 @@ function getVehicles() {
   })
 }
 
-authenticate().then(() => {
+authenticate().then((res) => {
+  console.log(res)
   getVehicles();             // To be continued...
+}).catch((err) => {
+  console.log(err)
 })
