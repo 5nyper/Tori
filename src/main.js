@@ -1,6 +1,6 @@
 /*
 *
-*     Tori - The Tesla Model 3, one badass
+*     Tori - The Tesla Model ≡
 *     @author: Vikat0n
 *
 */
